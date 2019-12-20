@@ -1,0 +1,13 @@
+.NavigationIconTb {
+  color: #a9b0b4;
+  font-size: 2rem;
+  margin-top: 0.6rem;
+  display: block;
+  margin-left: 1rem;
+}
+
+@media (min-width: 509px) {
+  .NavigationIconTb {
+    visibility: hidden;
+  }
+}

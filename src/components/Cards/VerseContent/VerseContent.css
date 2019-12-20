@@ -1,0 +1,6 @@
+.Move {
+  margin-left: -10500px;
+  transition-property: margin-left;
+  transition-duration: 50s;
+  transition-timing-function: linear;
+}

@@ -1,0 +1,83 @@
+.SmallCard,
+.BigCard {
+  grid-column: span 12;
+  background-color: #f7cf7c;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin: 0 0.3rem 0.3rem;
+  border-style: solid;
+  border-color: grey;
+  border-width: 0.04rem;
+  border-radius: 0.3rem;
+}
+
+@media (min-width: 400px) {
+  .SmallCard,
+  .BigCard {
+    margin: 0 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .SmallCard,
+  .BigCard {
+    margin: 0 0.7rem 0.7rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .SmallCard,
+  .BigCard {
+    margin: 0 0.8rem 0.8rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .SmallCard,
+  .BigCard {
+    margin: 0 0.9rem 0.9rem;
+  }
+}
+
+@media (min-width: 806px) {
+  .SmallCard,
+  .BigCard {
+    margin: 0 0.25rem 0.5rem 0.25rem;
+  }
+
+  .SmallCard {
+    grid-column: span 3;
+  }
+
+  .BigCard {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: 900px) {
+  .SmallCard,
+  .BigCard {
+    margin: 0 0.35rem 0.7rem 0.35rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .SmallCard,
+  .BigCard {
+    margin: 0 0.45rem 0.9rem 0.45rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .SmallCard,
+  .BigCard {
+    margin: 0 0.6rem 1.2rem 0.6rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  .SmallCard,
+  .BigCard {
+    margin: 0 0.75rem 1.5rem 0.75rem;
+  }
+}

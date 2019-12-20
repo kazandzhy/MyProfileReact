@@ -1,0 +1,54 @@
+.MyName,
+.CurrentPage,
+.Projects,
+.Resume {
+  margin: 0.5rem;
+}
+
+.Projects,
+.Resume {
+  font-size: 110%;
+  color: #a9b0b4;
+}
+
+.MyName,
+.CurrentPage {
+  font-size: 150%;
+}
+
+.MyName {
+  color: #d3cce2;
+}
+
+.CurrentPage {
+  color: #f7cf7c;
+}
+
+.Projects {
+  position: relative;
+  display: inline-block;
+}
+
+.ProjectsContent {
+  display: none;
+  position: absolute;
+  background-color: #e18e6d;
+  min-width: 20rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  color: black;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0;
+  text-indent: 1rem;
+}
+
+.Projects:hover .ProjectsContent {
+  display: block;
+}
+
+.Projects:hover,
+.Resume:hover {
+  background-color: #7c493d;
+}

@@ -1,0 +1,19 @@
+a.Brown {
+  color: #7c493d;
+  text-decoration: none;
+}
+
+a.Black {
+  color: black;
+  text-decoration: none;
+}
+
+a.Black:hover {
+  background-color: white;
+}
+
+a.Grey,
+a.Grey:visited {
+  color: #a9b0b4;
+  text-decoration: none;
+}

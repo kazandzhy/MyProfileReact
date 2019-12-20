@@ -1,0 +1,12 @@
+.DigitList {
+  width: 94%;
+  margin-left: 1rem;
+}
+
+.Verse {
+  overflow: hidden;
+  color: #867200;
+  background-color: #f7cf7c;
+  height: 1.1em;
+  font: 2em "Arial";
+}
