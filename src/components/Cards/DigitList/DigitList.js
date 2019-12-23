@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, Suspense, lazy } from "react";
 import "./DigitList.css";
-import VerseContent from "../VerseContent/VerseContent";
+
+const VerseContent = lazy(() => import("../VerseContent/VerseContent"));
 
 export default class DigitList extends Component {
   state = {
@@ -26,15 +27,16 @@ export default class DigitList extends Component {
   };
 
   render() {
-    console.log(this.state.move);
     return (
       <div className="DigitList">
         <h3 className="Verse">
-          <VerseContent
-            spanClass={this.state.move}
-            click={this.runText}
-            doubleClick={this.stopText}
-          ></VerseContent>
+          <Suspense fallback={<div>Loading...</div>}>
+            <VerseContent
+              spanClass={this.state.move}
+              click={this.runText}
+              doubleClick={this.stopText}
+            ></VerseContent>
+          </Suspense>
         </h3>
         <p>Helaman 5:12 (click the banner to read)</p>
       </div>

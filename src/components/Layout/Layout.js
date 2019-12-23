@@ -1,6 +1,7 @@
-import React, { Fragment, useState } from "react";
-import Toolbar from "../Navigation/Toolbar/Toolbar";
-import SideDrawer from "../Navigation/SideDrawer/SideDrawer";
+import React, { Suspense, useState, lazy } from "react";
+
+const Toolbar = lazy(() => import("../Navigation/Toolbar/Toolbar"));
+const SideDrawer = lazy(() => import("../Navigation/SideDrawer/SideDrawer"));
 
 const Layout = props => {
   const [sideDrawerState, setSideDrawerState] = useState({
@@ -32,7 +33,7 @@ const Layout = props => {
   };
 
   return (
-    <Fragment>
+    <Suspense fallback={<div>Loading...</div>}>
       <Toolbar
         closed={!sideDrawerState.showToolbar}
         toolbarToggleClicked={sideDrawerOpenHandler}
@@ -43,7 +44,7 @@ const Layout = props => {
         drawerToggleClicked={sideDrawerToggleHandler}
       />
       <main>{props.children}</main>
-    </Fragment>
+    </Suspense>
   );
 };
 

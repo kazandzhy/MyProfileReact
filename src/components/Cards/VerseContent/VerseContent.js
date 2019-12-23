@@ -2,7 +2,6 @@ import React from "react";
 import "./VerseContent.css";
 
 export default function Span(props) {
-  console.log(props.spanClass);
   return (
     <span
       className={props.spanClass}

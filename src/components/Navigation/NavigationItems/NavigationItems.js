@@ -1,13 +1,14 @@
-import React, { Fragment } from "react";
-import NavigationItem from "./NavigationItem/NavigationItem";
+import React, { Suspense, lazy } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortDown } from "@fortawesome/free-solid-svg-icons";
-import Link from "../../Navigation/Links/Link";
 import "./NavigationItems.css";
+
+const NavigationItem = lazy(() => import("./NavigationItem/NavigationItem"));
+const Link = lazy(() => import("../Links/Link"));
 
 export default function NavigationItems() {
   return (
-    <Fragment>
+    <Suspense fallback={<div>Loading...</div>}>
       <NavigationItem className="MyName">Kazandzhi</NavigationItem>
       <NavigationItem className="CurrentPage">Home</NavigationItem>
       <NavigationItem className="Projects">
@@ -83,9 +84,9 @@ export default function NavigationItems() {
       </NavigationItem>
       <NavigationItem className="Resume">
         <Link to="http://w3playground.com/resume.pdf" color="Grey">
-          My Portfolio
+          View My Resume
         </Link>
       </NavigationItem>
-    </Fragment>
+    </Suspense>
   );
 }

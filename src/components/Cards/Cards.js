@@ -1,10 +1,5 @@
-import React, { Fragment } from "react";
-import Card from "./Card/Card";
-import Image from "./Images/Image/Image";
-import Title from "./Title/Title";
-import Description from "./Description/Description";
-import HobbyList from "./HobbyList/HobbyList";
-import DigitList from "./DigitList/DigitList";
+import React, { Suspense, lazy } from "react";
+
 import {
   lFamily,
   mFamily,
@@ -36,9 +31,16 @@ import {
   sSinging
 } from "./Images/ImageHandler";
 
+const Image = lazy(() => import("./Images/Image/Image"));
+const Card = lazy(() => import("./Card/Card"));
+const Title = lazy(() => import("./Title/Title"));
+const Description = lazy(() => import("./Description/Description"));
+const HobbyList = lazy(() => import("./HobbyList/HobbyList"));
+const DigitList = lazy(() => import("./DigitList/DigitList"));
+
 export default function Cards() {
   return (
-    <Fragment>
+    <Suspense fallback={<div>Loading...</div>}>
       <Card className="SmallCard">
         <Image small={sHobbies} medium={mHobbies} alt="Hobbies" />
         <Title title="Priorities and hobbies:" />
@@ -143,6 +145,6 @@ export default function Cards() {
           click the dog to see an effect. Double click to counsel it.)
         </Description>
       </Card>
-    </Fragment>
+    </Suspense>
   );
 }
