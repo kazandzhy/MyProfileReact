@@ -1,9 +1,9 @@
-import React, { Suspense, lazy } from "react";
+import React, { Fragment } from "react";
 import "./SideDrawer.css";
 import NavigationItems from "../NavigationItems/NavigationItems";
 import NavigationIconSd from "../NavigationIconSd/NavigationIconSd";
 
-const Backdrop = lazy(() => import("../../Backdrop/Backdrop"));
+import Backdrop from "../../Backdrop/Backdrop";
 
 export default function SideDrawer(props) {
   let attachedClasses = ["SideDrawer", "Close"];
@@ -12,7 +12,7 @@ export default function SideDrawer(props) {
   }
 
   return (
-    <Suspense fallback={<div></div>}>
+    <Fragment>
       <Backdrop show={props.open} clicked={props.closed} />
       <div className={attachedClasses.join(" ")}>
         <NavigationIconSd
@@ -20,6 +20,6 @@ export default function SideDrawer(props) {
         ></NavigationIconSd>
         <NavigationItems></NavigationItems>
       </div>
-    </Suspense>
+    </Fragment>
   );
 }
