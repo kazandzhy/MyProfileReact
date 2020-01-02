@@ -40,7 +40,7 @@ const DigitList = lazy(() => import("./DigitList/DigitList"));
 
 export default function Cards() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div></div>}>
       <Card className="SmallCard">
         <Image small={sHobbies} medium={mHobbies} alt="Hobbies" />
         <Title title="Priorities and hobbies:" />

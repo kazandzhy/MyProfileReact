@@ -30,7 +30,7 @@ export default class DigitList extends Component {
     return (
       <div className="DigitList">
         <h3 className="Verse">
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div></div>}>
             <VerseContent
               spanClass={this.state.move}
               click={this.runText}

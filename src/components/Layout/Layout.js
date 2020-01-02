@@ -33,7 +33,7 @@ const Layout = props => {
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div></div>}>
       <Toolbar
         closed={!sideDrawerState.showToolbar}
         toolbarToggleClicked={sideDrawerOpenHandler}
