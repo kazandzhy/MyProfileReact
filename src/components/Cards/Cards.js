@@ -50,8 +50,8 @@ export default function Cards() {
         <Image small={sFamily} medium={mFamily} large={lFamily} alt="Family" />
         <Title title="My wife and I with our daughters" />
         <Description>
-          I am very blessed with a wonderful family! On this picture: my wife
-          Elizabeth, our daughters Katrina and Sophia, and me.
+          I am very blessed with a wonderful family! In this picture: my wife
+          Liz, our daughters Katrina and Sophia, and me.
         </Description>
       </Card>
       <Card className="SmallCard">
@@ -141,8 +141,7 @@ export default function Cards() {
         <Image id="Dog" small={sDog} medium={mDog} alt="Dog" />
         <Title title="More Facts" />
         <Description>
-          I'm afraid of big dogs. My wife lives dogs though! (If on a computer,
-          click the dog to see an effect. Double click to counsel it.)
+          I'm afraid of big dogs. My wife loves dogs though!
         </Description>
       </Card>
     </Suspense>

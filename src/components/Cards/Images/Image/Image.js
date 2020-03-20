@@ -3,39 +3,9 @@ import PropTypes from "prop-types";
 import "./Image.css";
 
 const Image = props => {
-  const [imgStyleState, setImgStyleState] = useState({
+  const [imgStyleState] = useState({
     imgStyle: { width: "", position: "relative", left: 0, top: 0 }
   });
-
-  const moveImage = () => {
-    if (props.id === "Dog") {
-      onmousemove = e => {
-        setImgStyleState({
-          imgStyle: {
-            width: "150px",
-            position: "fixed",
-            left: e.clientX + "px",
-            top: e.clientY + "px"
-          }
-        });
-      };
-    }
-  };
-
-  const stopImage = () => {
-    if (props.id === "Dog") {
-      onmousemove = e => {
-        setImgStyleState({
-          imgStyle: {
-            width: "",
-            position: "relative",
-            left: 0,
-            top: 0
-          }
-        });
-      };
-    }
-  };
 
   return (
     <div className="Image">
@@ -44,8 +14,6 @@ const Image = props => {
         <source srcSet={props.medium} media="(min-width: 320px)" />
         <img
           id={props.id}
-          onClick={moveImage}
-          onDoubleClick={stopImage}
           src={props.small}
           alt={props.alt}
           style={imgStyleState.imgStyle}
