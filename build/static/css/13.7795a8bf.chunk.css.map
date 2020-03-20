@@ -1,0 +1,1 @@
+{"version":3,"sources":["VerseContent.css"],"names":[],"mappings":"AAAA,MACE,oBAAqB,CACrB,uCAAgC,CAAhC,+BAAgC,CAChC,+BAAwB,CAAxB,uBAAwB,CACxB,yCAAkC,CAAlC,iCACF","file":"13.7795a8bf.chunk.css","sourcesContent":[".Move {\r\n  margin-left: -10500px;\r\n  transition-property: margin-left;\r\n  transition-duration: 50s;\r\n  transition-timing-function: linear;\r\n}\r\n"]}

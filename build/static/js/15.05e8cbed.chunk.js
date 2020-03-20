@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-profile"]=this["webpackJsonpreact-profile"]||[]).push([[15],{60:function(e,n,t){"use strict";t.r(n),t.d(n,"default",(function(){return a}));var c=t(0),r=t.n(c);t(75);function a(e){return r.a.createElement("div",{className:e.className},e.children)}},75:function(e,n,t){}}]);
+//# sourceMappingURL=15.05e8cbed.chunk.js.map
