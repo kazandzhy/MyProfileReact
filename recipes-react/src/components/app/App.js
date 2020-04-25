@@ -10,7 +10,7 @@ import { RecipesDetails } from "../recipes-page-components";
 export default function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={"/recipes-react"}>
         <Nav />
         <ContentContainer>
           <Switch>
